@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
+		F81D8EFC2B23AD1400DDBD38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */; };
+		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
+		F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */; };
+		F81D8F0B2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */; };
+		F81D8F152B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */; };
+		F81D8F172B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F81D8EF62B23AD1400DDBD38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
+			remoteInfo = "MiniMineSweeper Watch App";
+		};
+		F81D8F072B23AD1700DDBD38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
+			remoteInfo = "MiniMineSweeper Watch App";
+		};
+		F81D8F112B23AD1700DDBD38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
+			remoteInfo = "MiniMineSweeper Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F81D8F1D2B23AD1700DDBD38 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
+		F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppTests.swift; sourceTree = "<group>"; };
+		F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F81D8EF12B23AD1400DDBD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F032B23AD1700DDBD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F0D2B23AD1700DDBD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F81D8EE72B23AD1400DDBD38 = {
+			isa = PBXGroup;
+			children = (
+				F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */,
+				F81D8F092B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */,
+				F81D8F132B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */,
+				F81D8EEF2B23AD1400DDBD38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F81D8EEF2B23AD1400DDBD38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */,
+				F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */,
+				F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */,
+				F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */,
+				F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */,
+				F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */,
+				F81D8EFF2B23AD1700DDBD38 /* Preview Content */,
+			);
+			path = "MiniMineSweeper Watch App";
+			sourceTree = "<group>";
+		};
+		F81D8EFF2B23AD1700DDBD38 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F81D8F092B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */,
+			);
+			path = "MiniMineSweeper Watch AppTests";
+			sourceTree = "<group>";
+		};
+		F81D8F132B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */,
+				F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "MiniMineSweeper Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F81D8EED2B23AD1400DDBD38 /* MiniMineSweeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81D8F1E2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper" */;
+			buildPhases = (
+				F81D8EEC2B23AD1400DDBD38 /* Resources */,
+				F81D8F1D2B23AD1700DDBD38 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F81D8EF72B23AD1400DDBD38 /* PBXTargetDependency */,
+			);
+			name = MiniMineSweeper;
+			productName = MiniMineSweeper;
+			productReference = F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81D8F1A2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch App" */;
+			buildPhases = (
+				F81D8EF02B23AD1400DDBD38 /* Sources */,
+				F81D8EF12B23AD1400DDBD38 /* Frameworks */,
+				F81D8EF22B23AD1400DDBD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MiniMineSweeper Watch App";
+			productName = "MiniMineSweeper Watch App";
+			productReference = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F81D8F052B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81D8F212B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppTests" */;
+			buildPhases = (
+				F81D8F022B23AD1700DDBD38 /* Sources */,
+				F81D8F032B23AD1700DDBD38 /* Frameworks */,
+				F81D8F042B23AD1700DDBD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F81D8F082B23AD1700DDBD38 /* PBXTargetDependency */,
+			);
+			name = "MiniMineSweeper Watch AppTests";
+			productName = "MiniMineSweeper Watch AppTests";
+			productReference = F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F81D8F0F2B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81D8F242B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppUITests" */;
+			buildPhases = (
+				F81D8F0C2B23AD1700DDBD38 /* Sources */,
+				F81D8F0D2B23AD1700DDBD38 /* Frameworks */,
+				F81D8F0E2B23AD1700DDBD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F81D8F122B23AD1700DDBD38 /* PBXTargetDependency */,
+			);
+			name = "MiniMineSweeper Watch AppUITests";
+			productName = "MiniMineSweeper Watch AppUITests";
+			productReference = F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F81D8EE82B23AD1400DDBD38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F81D8EED2B23AD1400DDBD38 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					F81D8EF32B23AD1400DDBD38 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					F81D8F052B23AD1700DDBD38 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F81D8EF32B23AD1400DDBD38;
+					};
+					F81D8F0F2B23AD1700DDBD38 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F81D8EF32B23AD1400DDBD38;
+					};
+				};
+			};
+			buildConfigurationList = F81D8EEB2B23AD1400DDBD38 /* Build configuration list for PBXProject "MiniMineSweeper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F81D8EE72B23AD1400DDBD38;
+			productRefGroup = F81D8EEF2B23AD1400DDBD38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F81D8EED2B23AD1400DDBD38 /* MiniMineSweeper */,
+				F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */,
+				F81D8F052B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */,
+				F81D8F0F2B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F81D8EEC2B23AD1400DDBD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8EF22B23AD1400DDBD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */,
+				F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F042B23AD1700DDBD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F0E2B23AD1700DDBD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F81D8EF02B23AD1400DDBD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D8EFC2B23AD1400DDBD38 /* ContentView.swift in Sources */,
+				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F022B23AD1700DDBD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D8F0B2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81D8F0C2B23AD1700DDBD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81D8F172B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift in Sources */,
+				F81D8F152B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F81D8EF72B23AD1400DDBD38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
+			targetProxy = F81D8EF62B23AD1400DDBD38 /* PBXContainerItemProxy */;
+		};
+		F81D8F082B23AD1700DDBD38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
+			targetProxy = F81D8F072B23AD1700DDBD38 /* PBXContainerItemProxy */;
+		};
+		F81D8F122B23AD1700DDBD38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
+			targetProxy = F81D8F112B23AD1700DDBD38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F81D8F182B23AD1700DDBD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F81D8F192B23AD1700DDBD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F81D8F1B2B23AD1700DDBD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniMineSweeper Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		F81D8F1C2B23AD1700DDBD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniMineSweeper Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		F81D8F1F2B23AD1700DDBD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F81D8F202B23AD1700DDBD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F81D8F222B23AD1700DDBD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMineSweeper Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiniMineSweeper Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		F81D8F232B23AD1700DDBD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMineSweeper Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiniMineSweeper Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		F81D8F252B23AD1700DDBD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MiniMineSweeper Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		F81D8F262B23AD1700DDBD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6N9C22BV4A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MiniMineSweeper Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F81D8EEB2B23AD1400DDBD38 /* Build configuration list for PBXProject "MiniMineSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D8F182B23AD1700DDBD38 /* Debug */,
+				F81D8F192B23AD1700DDBD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81D8F1A2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D8F1B2B23AD1700DDBD38 /* Debug */,
+				F81D8F1C2B23AD1700DDBD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81D8F1E2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D8F1F2B23AD1700DDBD38 /* Debug */,
+				F81D8F202B23AD1700DDBD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81D8F212B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D8F222B23AD1700DDBD38 /* Debug */,
+				F81D8F232B23AD1700DDBD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81D8F242B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81D8F252B23AD1700DDBD38 /* Debug */,
+				F81D8F262B23AD1700DDBD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F81D8EE82B23AD1400DDBD38 /* Project object */;
+}
