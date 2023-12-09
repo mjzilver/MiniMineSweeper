@@ -11,7 +11,13 @@ import SwiftUI
 struct MiniMineSweeper_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GridView()
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        GridView()
     }
 }

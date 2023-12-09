@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
-		F81D8EFC2B23AD1400DDBD38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */; };
 		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
 		F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */; };
 		F81D8F0B2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */; };
 		F81D8F152B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */; };
 		F81D8F172B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */; };
+		F8BA04372B24947200DB8647 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04362B24947200DB8647 /* TileView.swift */; };
+		F8BA04392B24948000DB8647 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04382B24948000DB8647 /* GridView.swift */; };
+		F8BA043B2B24949300DB8647 /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA043A2B24949300DB8647 /* TileViewModel.swift */; };
+		F8BA043D2B2494A000DB8647 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA043C2B2494A000DB8647 /* GridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +62,6 @@
 		F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
-		F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,10 @@
 		F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8BA04362B24947200DB8647 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		F8BA04382B24948000DB8647 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		F8BA043A2B24949300DB8647 /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
+		F8BA043C2B2494A000DB8647 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +124,9 @@
 		F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F8BA04332B24935A00DB8647 /* ViewModel */,
+				F8BA04312B24930100DB8647 /* View */,
 				F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */,
-				F81D8EFB2B23AD1400DDBD38 /* ContentView.swift */,
 				F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */,
 				F81D8EFF2B23AD1700DDBD38 /* Preview Content */,
 			);
@@ -149,6 +156,24 @@
 				F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "MiniMineSweeper Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		F8BA04312B24930100DB8647 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA04362B24947200DB8647 /* TileView.swift */,
+				F8BA04382B24948000DB8647 /* GridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8BA04332B24935A00DB8647 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA043A2B24949300DB8647 /* TileViewModel.swift */,
+				F8BA043C2B2494A000DB8647 /* GridViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,8 +334,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81D8EFC2B23AD1400DDBD38 /* ContentView.swift in Sources */,
 				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
+				F8BA043D2B2494A000DB8647 /* GridViewModel.swift in Sources */,
+				F8BA043B2B24949300DB8647 /* TileViewModel.swift in Sources */,
+				F8BA04372B24947200DB8647 /* TileView.swift in Sources */,
+				F8BA04392B24948000DB8647 /* GridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
