@@ -12,21 +12,53 @@ import Combine
 class GridViewModel: ObservableObject {
     @Published var tiles: [[TileViewModel]] = []
     @Published var selectedTileIndex = 0
-    @Published var gameText = ""
-    private var totalColumns = 8
-    private var totalRows = 8
-    let totalTiles: Int
-    let mineCount: Int
-    private var mineIndices = Set<Int>()
     @Published var gameState = GameState.playing
 
+    private let totalColumns: Int
+    private let totalRows: Int
+    private let totalTiles: Int
+    private var mineCount: Int
+    private var mineIndices = Set<Int>()
+    private var percentMines = 0.1
+
     init(rows: Int, columns: Int) {
-        tiles = (0..<rows).map { row in (0..<columns).map { col in TileViewModel(y: row, x: col) } }
-        
+        totalRows = rows
+        totalColumns = columns
         totalTiles = totalRows * totalColumns
-        mineCount = Int(Double(totalTiles) * 0.1)
+        mineCount = Int(Double(totalTiles) * percentMines)
         
+        setupBoard()
+    }
+    
+    public func restartGame() {
+        percentMines += 0.1
+        
+        for i in 0..<tiles.count {
+            for j in 0..<tiles[i].count {
+                tiles[i][j].reset()
+            }
+        }
+        mineCount = Int(Double(totalTiles) * percentMines)
+
         setupMines()
+        
+        gameState = .playing
+    }
+    
+    public func setupBoard() {
+        tiles = (0..<totalRows).map { row in (0..<totalColumns).map { col in TileViewModel(y: row, x: col) } }
+        
+        mineCount = Int(Double(totalTiles) * percentMines)
+
+        setupMines()
+    }
+    
+    public func revealAll() {
+        for i in 0..<tiles.count {
+            for j in 0..<tiles[i].count {
+                tiles[i][j].revealTile()
+            }
+        }
     }
     
     public func setSelectedFlag() {
@@ -94,8 +126,9 @@ class GridViewModel: ObservableObject {
         
         if(tiles[row][col].isMine) {
             gameState = GameState.lost
+            revealAll()
         } else {
-            self.discoverNeighbors(row: row, col: col)
+            discoverNeighbors(row: row, col: col)
         }
     }
     

@@ -38,9 +38,6 @@ struct GridView: View {
                 return -10
             })
 
-            if(gridViewModel.gameText != "") {
-                Text(gridViewModel.gameText)
-            }
             
             if(gridViewModel.gameState == GameState.lost) {
                 Text("You have lost")
@@ -51,8 +48,16 @@ struct GridView: View {
         .onTapGesture {
             gridViewModel.discoverSelectedNeighbors()
         }
-        .onLongPressGesture(minimumDuration: 0.3, perform: gridViewModel.setSelectedFlag
-        )
+        .onLongPressGesture(minimumDuration: 0.3, perform: {
+            switch(gridViewModel.gameState) {
+            case .playing:
+                gridViewModel.setSelectedFlag()
+                break;
+            case .won ,.lost:
+                gridViewModel.restartGame()
+                break;
+            }
+        } )
     }
 }
 

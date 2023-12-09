@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815430D2B24CE4900EE3C53 /* GameState.swift */; };
+		F81543102B24D49200EE3C53 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F815430F2B24D49200EE3C53 /* .gitignore */; };
 		F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
 		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		F815430D2B24CE4900EE3C53 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		F815430F2B24D49200EE3C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		F81D8EE72B23AD1400DDBD38 = {
 			isa = PBXGroup;
 			children = (
+				F815430F2B24D49200EE3C53 /* .gitignore */,
 				F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */,
 				F81D8F092B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */,
 				F81D8F132B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */,
+				F81543102B24D49200EE3C53 /* .gitignore in Resources */,
 				F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,7 +578,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -590,8 +599,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

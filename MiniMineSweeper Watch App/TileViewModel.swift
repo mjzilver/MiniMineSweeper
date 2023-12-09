@@ -25,11 +25,22 @@ class TileViewModel: ObservableObject {
         self.y = y
     }
     
+    public func reset() {
+        isMine = false
+        isRevealed = false
+        isSelected = false
+        isFlag = false
+        number = 0
+    }
+    
     public func toggleFlag() {
-        isFlag = !isFlag
+        if !isRevealed {
+            isFlag = !isFlag
+        }
     }
     
     public func revealTile() {
         isRevealed = true
+        isFlag = false
     }
 }
