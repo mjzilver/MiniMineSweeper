@@ -16,7 +16,8 @@ struct TileView: View {
             if tileViewModel.isRevealed {
                 if tileViewModel.isMine {
                     Rectangle()
-                        .fill(Color.red)
+                        .fill(Color.black)
+                        .overlay(borderOverlay)
                 } else if tileViewModel.number > 0 {
                     Rectangle()
                         .fill(Color.purple)
@@ -24,15 +25,29 @@ struct TileView: View {
                             Text("\(tileViewModel.number)")
                                 .foregroundColor(.white)
                         )
+                        .overlay(borderOverlay)
                 } else {
                     Rectangle()
                         .fill(Color.green)
+                        .overlay(borderOverlay)
                 }
             } else {
-                Rectangle()
-                    .fill(Color.gray)
+                if tileViewModel.isFlag {
+                    Rectangle()
+                        .fill(Color.red)
+                        .overlay(borderOverlay)
+                } else {
+                    Rectangle()
+                        .fill(Color.gray)
+                        .overlay(borderOverlay)
+                }
             }
         }
         .frame(width: 22, height: 22)
+    }
+
+    private var borderOverlay: some View {
+        RoundedRectangle(cornerRadius: 4)
+            .stroke(tileViewModel.isSelected ? Color.yellow : Color.clear, lineWidth: tileViewModel.isSelected ? 2 : 0)
     }
 }

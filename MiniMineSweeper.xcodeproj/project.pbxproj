@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815430D2B24CE4900EE3C53 /* GameState.swift */; };
 		F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
 		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F815430D2B24CE4900EE3C53 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F815430C2B24CE3800EE3C53 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F815430D2B24CE4900EE3C53 /* GameState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		F81D8EE72B23AD1400DDBD38 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F815430C2B24CE3800EE3C53 /* Enums */,
 				F8BA04332B24935A00DB8647 /* ViewModel */,
 				F8BA04312B24930100DB8647 /* View */,
 				F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */,
@@ -337,6 +348,7 @@
 				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
 				F8BA043D2B2494A000DB8647 /* GridViewModel.swift in Sources */,
 				F8BA043B2B24949300DB8647 /* TileViewModel.swift in Sources */,
+				F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */,
 				F8BA04372B24947200DB8647 /* TileView.swift in Sources */,
 				F8BA04392B24948000DB8647 /* GridView.swift in Sources */,
 			);

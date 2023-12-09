@@ -11,21 +11,69 @@ import Combine
 
 class GridViewModel: ObservableObject {
     @Published var tiles: [[TileViewModel]] = []
+    @Published var selectedTileIndex = 0
     @Published var gameText = ""
+    private var totalColumns = 8
+    private var totalRows = 8
+    let totalTiles: Int
+    let mineCount: Int
+    private var mineIndices = Set<Int>()
+    @Published var gameState = GameState.playing
 
     init(rows: Int, columns: Int) {
         tiles = (0..<rows).map { row in (0..<columns).map { col in TileViewModel(y: row, x: col) } }
+        
+        totalTiles = totalRows * totalColumns
+        mineCount = Int(Double(totalTiles) * 0.1)
+        
         setupMines()
+    }
+    
+    public func setSelectedFlag() {
+        let row = selectedTileIndex / totalColumns
+        let col = selectedTileIndex % totalColumns
+        tiles[row][col].toggleFlag()
+        
+        var foundMines = 0;
+        
+        mineIndices.forEach { index in
+            let mineRow = index / totalColumns
+            let mineCol = index % totalColumns
+            
+            if(tiles[mineRow][mineCol].isFlag) {
+                foundMines += 1;
+            }
+        }
+        
+        if(foundMines == mineCount) {
+            gameState = GameState.won
+        }
+    }
+    
+    public func selectNextTile(up: Bool) {
+        var row = selectedTileIndex / totalColumns
+        var col = selectedTileIndex % totalColumns
+        tiles[row][col].isSelected = false
+
+        let nextIndex = up ? 1 : -1
+        
+        selectedTileIndex += nextIndex
+        
+        // Wrap around if below 0 or beyond the last tile
+        if selectedTileIndex < 0 {
+            selectedTileIndex = totalColumns * totalRows - 1
+        } else if selectedTileIndex >= totalColumns * totalRows {
+            selectedTileIndex = 0
+        }
+        
+        row = selectedTileIndex / totalColumns
+        col = selectedTileIndex % totalColumns
+        
+        tiles[row][col].isSelected = true
     }
 
     private func setupMines() {
-        let totalRows = tiles.count
-        let totalColumns = tiles.first?.count ?? 0
-        let totalTiles = totalRows * totalColumns
-        let mineCount = Int(Double(totalTiles) * 0.1)
-
         var minesPlaced = 0
-        var mineIndices = Set<Int>()
 
         while minesPlaced < mineCount {
             let randomRow = Int.random(in: 0..<totalRows)
@@ -37,6 +85,17 @@ class GridViewModel: ObservableObject {
                 tiles[randomRow][randomColumn].isMine = true
                 minesPlaced += 1
             }
+        }
+    }
+    
+    public func discoverSelectedNeighbors() {
+        let row = selectedTileIndex / totalColumns
+        let col = selectedTileIndex % totalColumns
+        
+        if(tiles[row][col].isMine) {
+            gameState = GameState.lost
+        } else {
+            self.discoverNeighbors(row: row, col: col)
         }
     }
     
