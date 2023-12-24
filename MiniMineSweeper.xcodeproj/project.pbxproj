@@ -7,94 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F800D5A42B38641800050A5E /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5A22B38641800050A5E /* TileViewModel.swift */; };
+		F800D5A52B38641800050A5E /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5A32B38641800050A5E /* GridViewModel.swift */; };
 		F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815430D2B24CE4900EE3C53 /* GameState.swift */; };
 		F81543102B24D49200EE3C53 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F815430F2B24D49200EE3C53 /* .gitignore */; };
-		F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
 		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
 		F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */; };
-		F81D8F0B2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */; };
-		F81D8F152B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */; };
-		F81D8F172B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */; };
 		F8BA04372B24947200DB8647 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04362B24947200DB8647 /* TileView.swift */; };
 		F8BA04392B24948000DB8647 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04382B24948000DB8647 /* GridView.swift */; };
-		F8BA043B2B24949300DB8647 /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA043A2B24949300DB8647 /* TileViewModel.swift */; };
-		F8BA043D2B2494A000DB8647 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA043C2B2494A000DB8647 /* GridViewModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F81D8EF62B23AD1400DDBD38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
-			remoteInfo = "MiniMineSweeper Watch App";
-		};
-		F81D8F072B23AD1700DDBD38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
-			remoteInfo = "MiniMineSweeper Watch App";
-		};
-		F81D8F112B23AD1700DDBD38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F81D8EE82B23AD1400DDBD38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F81D8EF32B23AD1400DDBD38;
-			remoteInfo = "MiniMineSweeper Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F81D8F1D2B23AD1700DDBD38 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				F81D8EF52B23AD1400DDBD38 /* MiniMineSweeper Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		F800D5A22B38641800050A5E /* TileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewModel.swift; path = ViewModel/TileViewModel.swift; sourceTree = "<group>"; };
+		F800D5A32B38641800050A5E /* GridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridViewModel.swift; path = ViewModel/GridViewModel.swift; sourceTree = "<group>"; };
 		F815430D2B24CE4900EE3C53 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F815430F2B24D49200EE3C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
 		F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppTests.swift; sourceTree = "<group>"; };
-		F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniMineSweeper Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeper_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8BA04362B24947200DB8647 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		F8BA04382B24948000DB8647 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		F8BA043A2B24949300DB8647 /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
-		F8BA043C2B2494A000DB8647 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F81D8EF12B23AD1400DDBD38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81D8F032B23AD1700DDBD38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81D8F0D2B23AD1700DDBD38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,8 +55,6 @@
 			children = (
 				F815430F2B24D49200EE3C53 /* .gitignore */,
 				F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */,
-				F81D8F092B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */,
-				F81D8F132B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */,
 				F81D8EEF2B23AD1400DDBD38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,10 +62,7 @@
 		F81D8EEF2B23AD1400DDBD38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */,
 				F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */,
-				F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */,
-				F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,23 +88,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F81D8F092B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				F81D8F0A2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift */,
-			);
-			path = "MiniMineSweeper Watch AppTests";
-			sourceTree = "<group>";
-		};
-		F81D8F132B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F81D8F142B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift */,
-				F81D8F162B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "MiniMineSweeper Watch AppUITests";
-			sourceTree = "<group>";
-		};
 		F8BA04312B24930100DB8647 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,8 +100,8 @@
 		F8BA04332B24935A00DB8647 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA043A2B24949300DB8647 /* TileViewModel.swift */,
-				F8BA043C2B2494A000DB8647 /* GridViewModel.swift */,
+				F800D5A32B38641800050A5E /* GridViewModel.swift */,
+				F800D5A22B38641800050A5E /* TileViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -193,23 +109,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F81D8EED2B23AD1400DDBD38 /* MiniMineSweeper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F81D8F1E2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper" */;
-			buildPhases = (
-				F81D8EEC2B23AD1400DDBD38 /* Resources */,
-				F81D8F1D2B23AD1700DDBD38 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F81D8EF72B23AD1400DDBD38 /* PBXTargetDependency */,
-			);
-			name = MiniMineSweeper;
-			productName = MiniMineSweeper;
-			productReference = F81D8EEE2B23AD1400DDBD38 /* MiniMineSweeper.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
 		F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F81D8F1A2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch App" */;
@@ -227,42 +126,6 @@
 			productReference = F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F81D8F052B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F81D8F212B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppTests" */;
-			buildPhases = (
-				F81D8F022B23AD1700DDBD38 /* Sources */,
-				F81D8F032B23AD1700DDBD38 /* Frameworks */,
-				F81D8F042B23AD1700DDBD38 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F81D8F082B23AD1700DDBD38 /* PBXTargetDependency */,
-			);
-			name = "MiniMineSweeper Watch AppTests";
-			productName = "MiniMineSweeper Watch AppTests";
-			productReference = F81D8F062B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F81D8F0F2B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F81D8F242B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppUITests" */;
-			buildPhases = (
-				F81D8F0C2B23AD1700DDBD38 /* Sources */,
-				F81D8F0D2B23AD1700DDBD38 /* Frameworks */,
-				F81D8F0E2B23AD1700DDBD38 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F81D8F122B23AD1700DDBD38 /* PBXTargetDependency */,
-			);
-			name = "MiniMineSweeper Watch AppUITests";
-			productName = "MiniMineSweeper Watch AppUITests";
-			productReference = F81D8F102B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,19 +136,8 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					F81D8EED2B23AD1400DDBD38 = {
-						CreatedOnToolsVersion = 14.2;
-					};
 					F81D8EF32B23AD1400DDBD38 = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					F81D8F052B23AD1700DDBD38 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = F81D8EF32B23AD1400DDBD38;
-					};
-					F81D8F0F2B23AD1700DDBD38 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = F81D8EF32B23AD1400DDBD38;
 					};
 				};
 			};
@@ -302,22 +154,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F81D8EED2B23AD1400DDBD38 /* MiniMineSweeper */,
 				F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */,
-				F81D8F052B23AD1700DDBD38 /* MiniMineSweeper Watch AppTests */,
-				F81D8F0F2B23AD1700DDBD38 /* MiniMineSweeper Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F81D8EEC2B23AD1400DDBD38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F81D8EF22B23AD1400DDBD38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,20 +170,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F81D8F042B23AD1700DDBD38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81D8F0E2B23AD1700DDBD38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,51 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F800D5A52B38641800050A5E /* GridViewModel.swift in Sources */,
 				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
-				F8BA043D2B2494A000DB8647 /* GridViewModel.swift in Sources */,
-				F8BA043B2B24949300DB8647 /* TileViewModel.swift in Sources */,
 				F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */,
 				F8BA04372B24947200DB8647 /* TileView.swift in Sources */,
 				F8BA04392B24948000DB8647 /* GridView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81D8F022B23AD1700DDBD38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F81D8F0B2B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81D8F0C2B23AD1700DDBD38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F81D8F172B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITestsLaunchTests.swift in Sources */,
-				F81D8F152B23AD1700DDBD38 /* MiniMineSweeper_Watch_AppUITests.swift in Sources */,
+				F800D5A42B38641800050A5E /* TileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F81D8EF72B23AD1400DDBD38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
-			targetProxy = F81D8EF62B23AD1400DDBD38 /* PBXContainerItemProxy */;
-		};
-		F81D8F082B23AD1700DDBD38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
-			targetProxy = F81D8F072B23AD1700DDBD38 /* PBXContainerItemProxy */;
-		};
-		F81D8F122B23AD1700DDBD38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F81D8EF32B23AD1400DDBD38 /* MiniMineSweeper Watch App */;
-			targetProxy = F81D8F112B23AD1700DDBD38 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F81D8F182B23AD1700DDBD38 /* Debug */ = {
@@ -566,133 +359,6 @@
 			};
 			name = Release;
 		};
-		F81D8F1F2B23AD1700DDBD38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		F81D8F202B23AD1700DDBD38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniMineSweeper;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mjzilver.MiniMineSweeper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		F81D8F222B23AD1700DDBD38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMineSweeper Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiniMineSweeper Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		F81D8F232B23AD1700DDBD38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniMineSweeper Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiniMineSweeper Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		F81D8F252B23AD1700DDBD38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "MiniMineSweeper Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		F81D8F262B23AD1700DDBD38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6N9C22BV4A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mjzilver.MiniMineSweeper-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "MiniMineSweeper Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -710,33 +376,6 @@
 			buildConfigurations = (
 				F81D8F1B2B23AD1700DDBD38 /* Debug */,
 				F81D8F1C2B23AD1700DDBD38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F81D8F1E2B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F81D8F1F2B23AD1700DDBD38 /* Debug */,
-				F81D8F202B23AD1700DDBD38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F81D8F212B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F81D8F222B23AD1700DDBD38 /* Debug */,
-				F81D8F232B23AD1700DDBD38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F81D8F242B23AD1700DDBD38 /* Build configuration list for PBXNativeTarget "MiniMineSweeper Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F81D8F252B23AD1700DDBD38 /* Debug */,
-				F81D8F262B23AD1700DDBD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
