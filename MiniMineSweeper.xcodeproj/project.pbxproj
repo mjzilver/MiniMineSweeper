@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F800D5A42B38641800050A5E /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5A22B38641800050A5E /* TileViewModel.swift */; };
 		F800D5A52B38641800050A5E /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5A32B38641800050A5E /* GridViewModel.swift */; };
+		F800D5B22B38783500050A5E /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5B12B38783500050A5E /* TileModel.swift */; };
+		F800D5B42B38783F00050A5E /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F800D5B32B38783F00050A5E /* GridModel.swift */; };
 		F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815430D2B24CE4900EE3C53 /* GameState.swift */; };
 		F81543102B24D49200EE3C53 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F815430F2B24D49200EE3C53 /* .gitignore */; };
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		F800D5A22B38641800050A5E /* TileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileViewModel.swift; path = ViewModel/TileViewModel.swift; sourceTree = "<group>"; };
 		F800D5A32B38641800050A5E /* GridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridViewModel.swift; path = ViewModel/GridViewModel.swift; sourceTree = "<group>"; };
+		F800D5B12B38783500050A5E /* TileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModel.swift; sourceTree = "<group>"; };
+		F800D5B32B38783F00050A5E /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
 		F815430D2B24CE4900EE3C53 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F815430F2B24D49200EE3C53 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F81D8EF42B23AD1400DDBD38 /* MiniMineSweeper Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMineSweeper Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F800D5B02B3877CA00050A5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F800D5B12B38783500050A5E /* TileModel.swift */,
+				F800D5B32B38783F00050A5E /* GridModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F815430C2B24CE3800EE3C53 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		F81D8EF82B23AD1400DDBD38 /* MiniMineSweeper Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F800D5B02B3877CA00050A5E /* Model */,
 				F815430C2B24CE3800EE3C53 /* Enums */,
 				F8BA04332B24935A00DB8647 /* ViewModel */,
 				F8BA04312B24930100DB8647 /* View */,
@@ -178,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F800D5A52B38641800050A5E /* GridViewModel.swift in Sources */,
+				F800D5B42B38783F00050A5E /* GridModel.swift in Sources */,
 				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
 				F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */,
 				F8BA04372B24947200DB8647 /* TileView.swift in Sources */,
+				F800D5B22B38783500050A5E /* TileModel.swift in Sources */,
 				F8BA04392B24948000DB8647 /* GridView.swift in Sources */,
 				F800D5A42B38641800050A5E /* TileViewModel.swift in Sources */,
 			);

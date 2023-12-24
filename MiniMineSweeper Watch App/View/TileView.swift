@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TileView: View {
-    @StateObject var tileViewModel: TileViewModel
+    @ObservedObject var tileViewModel: TileViewModel
 
     var body: some View {
         Group {

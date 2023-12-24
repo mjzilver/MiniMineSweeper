@@ -8,39 +8,41 @@
 import Foundation
 
 class TileViewModel: ObservableObject {
-    @Published var isMine: Bool
-    @Published var isRevealed: Bool
-    @Published var number: Int
-    @Published var isSelected: Bool
-    @Published var isFlag: Bool
-    public var x, y: Int
-    
-    init(y: Int, x: Int) {
-        isMine = false
-        isRevealed = false
-        isSelected = false
-        isFlag = false
-        number = 0
-        self.x = x
-        self.y = y
+    @Published var model: TileModel
+
+    init(tileModel: TileModel) {
+        self.model = tileModel
     }
-    
-    public func reset() {
-        isMine = false
-        isRevealed = false
-        isSelected = false
-        isFlag = false
-        number = 0
+
+    var isRevealed: Bool {
+        model.isRevealed
     }
-    
-    public func toggleFlag() {
-        if !isRevealed {
-            isFlag = !isFlag
-        }
+
+    var isMine: Bool {
+        model.isMine
     }
-    
-    public func revealTile() {
-        isRevealed = true
-        isFlag = false
+
+    var number: Int {
+        model.number
+    }
+
+    var isFlag: Bool {
+        model.isFlag
+    }
+
+    var isSelected: Bool {
+        model.isSelected
+    }
+
+    func reset() {
+        model.reset()
+    }
+
+    func toggleFlag() {
+        model.toggleFlag()
+    }
+
+    func revealTile() {
+        model.revealTile()
     }
 }

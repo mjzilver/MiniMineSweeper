@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @StateObject private var gridViewModel = GridViewModel(rows: 8, columns: 8)
+    @ObservedObject private var gridViewModel = GridViewModel(rows: 8, columns: 8)
     @State private var up = false
     @State private var scrollAmount = 0.0
     @State private var prevScrollAmount = 0.0
@@ -19,7 +19,7 @@ struct GridView: View {
             ForEach(0..<8) { row in
                 HStack(spacing: 2) {
                     ForEach(0..<8) { col in
-                        TileView(tileViewModel: gridViewModel.tiles[row][col])
+                        TileView(tileViewModel: TileViewModel(tileModel: gridViewModel.getTile(row: row, col: col)))
                     }
                 }
             }
@@ -38,7 +38,6 @@ struct GridView: View {
                 return -10
             })
 
-            
             if(gridViewModel.gameState == GameState.lost) {
                 Text("You have lost")
             } else if(gridViewModel.gameState == GameState.won) {

@@ -10,169 +10,171 @@ import SwiftUI
 import Combine
 
 class GridViewModel: ObservableObject {
-    @Published var tiles: [[TileViewModel]] = []
-    @Published var selectedTileIndex = 0
-    @Published var gameState = GameState.playing
-
-    private let totalColumns: Int
-    private let totalRows: Int
-    private let totalTiles: Int
-    private var mineCount: Int
-    private var mineIndices = Set<Int>()
-    private var percentMines = 0.1
+    @Published var model: GridModel
 
     init(rows: Int, columns: Int) {
-        totalRows = rows
-        totalColumns = columns
-        totalTiles = totalRows * totalColumns
-        mineCount = Int(Double(totalTiles) * percentMines)
-        
+        self.model = GridModel(
+            tiles: (0..<rows).map { row in (0..<columns).map { col in TileModel(x: col, y: row) } },
+            totalColumns: columns,
+            totalRows: rows,
+            totalTiles: rows * columns,
+            mineCount: Int(Double(rows * columns) * 0.1)
+        )
+
         setupBoard()
     }
     
+    var gameState: GameState {
+        model.gameState
+    }
+
+    public func getTile(row: Int, col: Int) -> TileModel {
+        model.tiles[row][col]
+    }
+
     public func restartGame() {
-        percentMines += 0.1
-        
-        for i in 0..<tiles.count {
-            for j in 0..<tiles[i].count {
-                tiles[i][j].reset()
+        model.percentMines += 0.1
+
+        for i in 0..<model.tiles.count {
+            for j in 0..<model.tiles[i].count {
+                model.tiles[i][j].reset()
             }
         }
-        mineCount = Int(Double(totalTiles) * percentMines)
+        model.mineCount = Int(Double(model.totalTiles) * model.percentMines)
 
         setupMines()
-        
-        gameState = .playing
+
+        model.gameState = .playing
     }
-    
+
     public func setupBoard() {
-        tiles = (0..<totalRows).map { row in (0..<totalColumns).map { col in TileViewModel(y: row, x: col) } }
-        
-        mineCount = Int(Double(totalTiles) * percentMines)
+        model.tiles = (0..<model.totalRows).map { row in (0..<model.totalColumns).map { col in TileModel(x: col, y: row) } }
+
+        model.mineCount = Int(Double(model.totalTiles) * model.percentMines)
 
         setupMines()
     }
-    
+
     public func revealAll() {
-        for i in 0..<tiles.count {
-            for j in 0..<tiles[i].count {
-                tiles[i][j].revealTile()
+        for i in 0..<model.tiles.count {
+            for j in 0..<model.tiles[i].count {
+                model.tiles[i][j].revealTile()
             }
         }
     }
-    
+
     public func setSelectedFlag() {
-        let row = selectedTileIndex / totalColumns
-        let col = selectedTileIndex % totalColumns
-        tiles[row][col].toggleFlag()
-        
+        let row = model.selectedTileIndex / model.totalColumns
+        let col = model.selectedTileIndex % model.totalColumns
+        model.tiles[row][col].toggleFlag()
+
         var foundMines = 0;
-        
-        mineIndices.forEach { index in
-            let mineRow = index / totalColumns
-            let mineCol = index % totalColumns
-            
-            if(tiles[mineRow][mineCol].isFlag) {
+
+        model.mineIndices.forEach { index in
+            let mineRow = index / model.totalColumns
+            let mineCol = index % model.totalColumns
+
+            if(model.tiles[mineRow][mineCol].isFlag) {
                 foundMines += 1;
             }
         }
-        
-        if(foundMines == mineCount) {
-            gameState = GameState.won
+
+        if(foundMines == model.mineCount) {
+            model.gameState = GameState.won
         }
     }
-    
-    public func selectNextTile(up: Bool) {
-        var row = selectedTileIndex / totalColumns
-        var col = selectedTileIndex % totalColumns
-        tiles[row][col].isSelected = false
 
+    public func selectNextTile(up: Bool) {
+        var row = model.selectedTileIndex / model.totalColumns
+        var col = model.selectedTileIndex % model.totalColumns
+        model.tiles[row][col].isSelected = false
+        
         let nextIndex = up ? 1 : -1
-        
-        selectedTileIndex += nextIndex
-        
+
+        model.selectedTileIndex += nextIndex
+
         // Wrap around if below 0 or beyond the last tile
-        if selectedTileIndex < 0 {
-            selectedTileIndex = totalColumns * totalRows - 1
-        } else if selectedTileIndex >= totalColumns * totalRows {
-            selectedTileIndex = 0
+        if model.selectedTileIndex < 0 {
+            model.selectedTileIndex = model.totalColumns * model.totalRows - 1
+        } else if model.selectedTileIndex >= model.totalColumns * model.totalRows {
+            model.selectedTileIndex = 0
         }
-        
-        row = selectedTileIndex / totalColumns
-        col = selectedTileIndex % totalColumns
-        
-        tiles[row][col].isSelected = true
+
+        row = model.selectedTileIndex / model.totalColumns
+        col = model.selectedTileIndex % model.totalColumns
+
+        model.tiles[row][col].isSelected = true
     }
 
     private func setupMines() {
         var minesPlaced = 0
 
-        while minesPlaced < mineCount {
-            let randomRow = Int.random(in: 0..<totalRows)
-            let randomColumn = Int.random(in: 0..<totalColumns)
-            let randomIndex = randomRow * totalColumns + randomColumn
+        while minesPlaced < model.mineCount {
+            let randomRow = Int.random(in: 0..<model.totalRows)
+            let randomColumn = Int.random(in: 0..<model.totalColumns)
+            let randomIndex = randomRow * model.totalColumns + randomColumn
 
-            if !mineIndices.contains(randomIndex) {
-                mineIndices.insert(randomIndex)
-                tiles[randomRow][randomColumn].isMine = true
+            if !model.mineIndices.contains(randomIndex) {
+                model.mineIndices.insert(randomIndex)
+                model.tiles[randomRow][randomColumn].isMine = true
                 minesPlaced += 1
             }
         }
     }
-    
+
     public func discoverSelectedNeighbors() {
-        let row = selectedTileIndex / totalColumns
-        let col = selectedTileIndex % totalColumns
+        let row = model.selectedTileIndex / model.totalColumns
+        let col = model.selectedTileIndex % model.totalColumns
         
-        if(tiles[row][col].isMine) {
-            gameState = GameState.lost
+        if(model.tiles[row][col].isMine) {
+            model.gameState = GameState.lost
             revealAll()
         } else {
             discoverNeighbors(row: row, col: col)
         }
     }
-    
+
     public func discoverNeighbors(row: Int, col: Int) {
-        let clickedTile = tiles[row][col]
-        
+        let clickedTile = model.tiles[row][col]
+
         // Define the relative positions of neighbors (a 3x3 grid)
         let relativeRows = [-1, -1, -1, 0, 0, 1, 1, 1]
         let relativeCols = [-1, 0, 1, -1, 1, -1, 0, 1]
-        
+
         clickedTile.revealTile()
-        
+
         var bombCount = 0
-        
+
         // Iterate through neighbors
         for i in 0..<relativeRows.count {
             let neighborRow = row + relativeRows[i]
             let neighborCol = col + relativeCols[i]
-            
-            if neighborRow >= 0 && neighborRow < tiles.count
-                && neighborCol >= 0 && neighborCol < tiles[0].count {
-                let neighbor = tiles[neighborRow][neighborCol]
-                
+
+            if neighborRow >= 0 && neighborRow < model.tiles.count
+                && neighborCol >= 0 && neighborCol < model.tiles[0].count {
+                let neighbor = model.tiles[neighborRow][neighborCol]
+
                 if neighbor.isMine {
                     bombCount += 1
                 }
             }
         }
-        
+
         // Update the clicked tile with the bomb count
         if bombCount > 0 {
             clickedTile.number = bombCount
         }
-        
+
         // If the bomb count is zero, recursively discover neighbors
         if bombCount == 0 {
             for i in 0..<relativeRows.count {
                 let neighborRow = row + relativeRows[i]
                 let neighborCol = col + relativeCols[i]
-                
-                if neighborRow >= 0 && neighborRow < tiles.count
-                    && neighborCol >= 0 && neighborCol < tiles[0].count {
-                    let neighbor = tiles[neighborRow][neighborCol]
-                    
+
+                if neighborRow >= 0 && neighborRow < model.tiles.count
+                    && neighborCol >= 0 && neighborCol < model.tiles[0].count {
+                    let neighbor = model.tiles[neighborRow][neighborCol]
+
                     if !neighbor.isRevealed {
                         discoverNeighbors(row: neighbor.y, col: neighbor.x)
                     }
