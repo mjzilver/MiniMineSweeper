@@ -10,6 +10,7 @@ import Combine
 
 class GridViewModel: ObservableObject {
     @Published var model: GridModel
+    private var minePercentageStep = 0.05
 
     init(rows: Int, columns: Int) {
         self.model = GridModel(
@@ -17,7 +18,7 @@ class GridViewModel: ObservableObject {
             totalColumns: columns,
             totalRows: rows,
             totalTiles: rows * columns,
-            mineCount: Int(Double(rows * columns) * 0.1)
+            mineCount: Int(Double(rows * columns) * minePercentageStep)
         )
 
         setupBoard()
@@ -31,16 +32,18 @@ class GridViewModel: ObservableObject {
         model.tiles[row][col]
     }
 
-    public func restartGame() {
-        model.percentMines += 0.1
+    public func restartGame(increaseMines: Bool = false) {
+        if(increaseMines) {
+            model.percentMines += minePercentageStep
+        }
 
         for i in 0..<model.tiles.count {
             for j in 0..<model.tiles[i].count {
                 model.tiles[i][j].reset()
             }
         }
-        model.mineCount = Int(Double(model.totalTiles) * model.percentMines)
 
+        model.mineCount = Int(Double(model.totalTiles) * model.percentMines)
         setupMines()
 
         model.gameState = .playing
@@ -139,7 +142,7 @@ class GridViewModel: ObservableObject {
     public func discoverNeighbors(row: Int, col: Int) {
         let clickedTile = model.tiles[row][col]
 
-        // Define the relative positions of neighbors (a 3x3 grid)
+        // relative positions of neighbors (a 3x3 grid)
         let relativeRows = [-1, -1, -1, 0, 0, 1, 1, 1]
         let relativeCols = [-1, 0, 1, -1, 1, -1, 0, 1]
 

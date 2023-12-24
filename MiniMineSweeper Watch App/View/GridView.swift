@@ -11,7 +11,8 @@ struct GridView: View {
     @State private var up = false
     @State private var scrollAmount = 0.0
     @State private var prevScrollAmount = 0.0
-
+    @State private var showingSettings = false
+    
     let scrollThreshold: Double = 10.0
 
     var body: some View {
@@ -57,6 +58,18 @@ struct GridView: View {
                 break;
             }
         } )
+        .gesture(swipeUpGesture)
+        .sheet(isPresented: $showingSettings) {
+            SettingsView(gridViewModel: gridViewModel, showingSettings: $showingSettings)
+        }
+    }
+    private var swipeUpGesture: some Gesture {
+        DragGesture()
+            .onEnded { gesture in
+                if gesture.translation.height < -50 {
+                    showingSettings.toggle()
+                }
+            }
     }
 }
 
