@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class TileViewModel: ObservableObject {
     @Published var model: TileModel

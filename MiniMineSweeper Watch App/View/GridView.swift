@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @ObservedObject private var gridViewModel = GridViewModel(rows: 8, columns: 8)
+    @StateObject private var gridViewModel = GridViewModel(rows: 8, columns: 8)
     @State private var up = false
     @State private var scrollAmount = 0.0
     @State private var prevScrollAmount = 0.0

@@ -11,13 +11,13 @@ class GridModel: ObservableObject {
     @Published var tiles: [[TileModel]]
     @Published var selectedTileIndex: Int
     @Published var gameState: GameState
-    @Published var totalColumns: Int
-    @Published var totalRows: Int
-    @Published var totalTiles: Int
-    @Published var mineCount: Int
-    @Published var mineIndices: Set<Int>
-    @Published var percentMines: Double
-    
+    var totalColumns: Int
+    var totalRows: Int
+    var totalTiles: Int
+    var mineCount: Int
+    var mineIndices: Set<Int>
+    var percentMines: Double
+        
     init(tiles: [[TileModel]], selectedTileIndex: Int = 0, gameState: GameState = .playing, totalColumns: Int, totalRows: Int, totalTiles: Int, mineCount: Int, mineIndices: Set<Int> = Set<Int>(), percentMines: Double = 0.1) {
         self.tiles = tiles
         self.selectedTileIndex = selectedTileIndex

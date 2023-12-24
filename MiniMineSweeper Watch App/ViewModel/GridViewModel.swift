@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 import Combine
 
 class GridViewModel: ObservableObject {
@@ -45,6 +44,7 @@ class GridViewModel: ObservableObject {
         setupMines()
 
         model.gameState = .playing
+        objectWillChange.send()
     }
 
     public func setupBoard() {
@@ -82,6 +82,7 @@ class GridViewModel: ObservableObject {
         if(foundMines == model.mineCount) {
             model.gameState = GameState.won
         }
+        objectWillChange.send()
     }
 
     public func selectNextTile(up: Bool) {
@@ -132,6 +133,7 @@ class GridViewModel: ObservableObject {
         } else {
             discoverNeighbors(row: row, col: col)
         }
+        objectWillChange.send()
     }
 
     public func discoverNeighbors(row: Int, col: Int) {
