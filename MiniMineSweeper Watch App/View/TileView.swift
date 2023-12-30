@@ -10,6 +10,9 @@ import SwiftUI
 
 struct TileView: View {
     @ObservedObject var tileViewModel: TileViewModel
+    static var tileSize = 22.0
+    static var borderWidth = 2.0
+    static var borderRounding = 4.0
 
     var body: some View {
         Group {
@@ -43,11 +46,11 @@ struct TileView: View {
                 }
             }
         }
-        .frame(width: 22, height: 22)
+        .frame(width: TileView.tileSize, height: TileView.tileSize)
     }
 
     private var borderOverlay: some View {
-        RoundedRectangle(cornerRadius: 4)
-            .stroke(tileViewModel.isSelected ? Color.yellow : Color.clear, lineWidth: tileViewModel.isSelected ? 2 : 0)
+        RoundedRectangle(cornerRadius: TileView.borderRounding)
+            .stroke(tileViewModel.isSelected ? Color.yellow : Color.clear, lineWidth: tileViewModel.isSelected ? TileView.borderWidth : 0)
     }
 }

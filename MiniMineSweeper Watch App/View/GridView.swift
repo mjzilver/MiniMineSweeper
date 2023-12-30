@@ -7,13 +7,21 @@
 import SwiftUI
 
 struct GridView: View {
-    @StateObject private var gridViewModel = GridViewModel(rows: 8, columns: 8)
-    @State private var up = false
-    @State private var scrollAmount = 0.0
-    @State private var prevScrollAmount = 0.0
+    @ObservedObject private var gridViewModel: GridViewModel
+    @ObservedObject private var settingsViewModel: SettingsViewModel
+    @State public var up = false
+    @State public var scrollAmount = 0.0
+    @State public var prevScrollAmount = 0.0
     @State private var showingSettings = false
+    @State private var gameModeHandler: GameModeHandler = CrownModeHandler()
     
-    let scrollThreshold: Double = 10.0
+    static let scrollThreshold: Double = 10.0
+    
+    init() {
+        let settingsVM = SettingsViewModel()
+        gridViewModel = GridViewModel(rows: 8, columns: 8, settingsViewModel: settingsVM)
+        settingsViewModel = settingsVM
+    }
 
     var body: some View {
         VStack(spacing: 2) {
@@ -27,13 +35,7 @@ struct GridView: View {
             .focusable(true)
             .digitalCrownRotation($scrollAmount)
             .onChange(of: scrollAmount) { value in
-                let diff = value - prevScrollAmount
-
-                if abs(diff) > scrollThreshold {
-                    self.up = (diff > 0)
-                    self.prevScrollAmount = value
-                    self.gridViewModel.selectNextTile(up: self.up)
-                }
+                gameModeHandler.handleDigitalCrownRotation(gridViewModel: gridViewModel, gridView: self, value: value)
             }
             .alignmentGuide(.top, computeValue: { _ in
                 return -10
@@ -45,24 +47,40 @@ struct GridView: View {
                 Text("You have won")
             }
         }
-        .onTapGesture {
-            gridViewModel.discoverSelectedNeighbors()
+        .onTapGesture { tapPoint in
+            gameModeHandler.handleTapGesture(gridViewModel: gridViewModel, tap: tapPoint)
         }
-        .onLongPressGesture(minimumDuration: 0.3, perform: {
-            switch(gridViewModel.gameState) {
-            case .playing:
-                gridViewModel.setSelectedFlag()
-                break;
-            case .won ,.lost:
-                gridViewModel.restartGame()
-                break;
+        .gesture(LongPressGesture(minimumDuration: 0.3)
+            .sequenced(before: DragGesture(minimumDistance: 0.0)
+            .onEnded { value in
+                switch gridViewModel.gameState {
+                case .playing:
+                    gameModeHandler.handleLongPress(gridViewModel: gridViewModel, tap: value.location)
+                case .won, .lost:
+                    gridViewModel.restartGame()
+                }
             }
-        } )
+        ))
         .gesture(swipeUpGesture)
         .sheet(isPresented: $showingSettings) {
             SettingsView(gridViewModel: gridViewModel, showingSettings: $showingSettings)
+                .onChange(of: settingsViewModel.model.gameMode) { newGameMode in
+                    gameModeHandler = createGameModeHandler(for: newGameMode)
+                }
         }
     }
+    
+    private func createGameModeHandler(for gameMode: GameMode) -> GameModeHandler {
+        switch gameMode {
+        case .crown:
+            gridViewModel.displaySelectTile(display: true)
+            return CrownModeHandler()
+        case .click:
+            gridViewModel.displaySelectTile(display: false)
+            return ClickModeHandler()
+        }
+    }
+    
     private var swipeUpGesture: some Gesture {
         DragGesture()
             .onEnded { gesture in

@@ -10,7 +10,14 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var gridViewModel: GridViewModel
+    @ObservedObject var settingsViewModel: SettingsViewModel
     @Binding var showingSettings: Bool
+    
+    init(gridViewModel: GridViewModel, showingSettings: Binding<Bool>) {
+        self.gridViewModel = gridViewModel
+        self.settingsViewModel = gridViewModel.settingsViewModel
+        self._showingSettings = showingSettings
+    }
     
     var body: some View {
         NavigationView {
@@ -18,7 +25,14 @@ struct SettingsView: View {
                 Section {
                     Button("Restart Game") {
                         gridViewModel.restartGame()
-                        showingSettings.toggle()
+                        showingSettings = false
+                    }
+                }
+                Section {
+                    Picker("Game Mode", selection: $settingsViewModel.model.gameMode) {
+                        ForEach(GameMode.allCases, id: \.self) { mode in
+                            Text(mode.rawValue)
+                        }
                     }
                 }
                 Section {

@@ -10,9 +10,11 @@ import Combine
 
 class GridViewModel: ObservableObject {
     @Published var model: GridModel
+    @Published var settingsViewModel: SettingsViewModel
     private var minePercentageStep = 0.05
 
-    init(rows: Int, columns: Int) {
+    init(rows: Int, columns: Int, settingsViewModel: SettingsViewModel) {
+        self.settingsViewModel = settingsViewModel
         self.model = GridModel(
             tiles: (0..<rows).map { row in (0..<columns).map { col in TileModel(x: col, y: row) } },
             totalColumns: columns,
@@ -58,7 +60,7 @@ class GridViewModel: ObservableObject {
         setupMines()
     }
 
-    public func revealAll() {
+    private func revealAll() {
         for i in 0..<model.tiles.count {
             for j in 0..<model.tiles[i].count {
                 model.tiles[i][j].revealTile()
@@ -69,6 +71,10 @@ class GridViewModel: ObservableObject {
     public func setSelectedFlag() {
         let row = model.selectedTileIndex / model.totalColumns
         let col = model.selectedTileIndex % model.totalColumns
+        setTileFlag(row: row, col: col)
+    }
+    
+    public func setTileFlag(row: Int, col: Int) {
         model.tiles[row][col].toggleFlag()
 
         var foundMines = 0;
@@ -88,6 +94,13 @@ class GridViewModel: ObservableObject {
         objectWillChange.send()
     }
 
+    public func displaySelectTile(display: Bool = true) {
+        let row = model.selectedTileIndex / model.totalColumns
+        let col = model.selectedTileIndex % model.totalColumns
+        model.tiles[row][col].isSelected = display
+        objectWillChange.send()
+    }
+    
     public func selectNextTile(up: Bool) {
         var row = model.selectedTileIndex / model.totalColumns
         var col = model.selectedTileIndex % model.totalColumns
@@ -125,11 +138,21 @@ class GridViewModel: ObservableObject {
             }
         }
     }
+    
+    public func tappedTile(row: Int, col: Int) {
+        if row >= 0 && col >= 0 && row < model.totalRows && col < model.totalColumns {
+            discoverTile(row: row, col: col)
+        }
+    }
 
     public func discoverSelectedNeighbors() {
         let row = model.selectedTileIndex / model.totalColumns
         let col = model.selectedTileIndex % model.totalColumns
         
+        discoverTile(row: row, col: col)
+    }
+    
+    private func discoverTile(row: Int, col: Int) {
         if(model.tiles[row][col].isMine) {
             model.gameState = GameState.lost
             revealAll()
@@ -139,7 +162,7 @@ class GridViewModel: ObservableObject {
         objectWillChange.send()
     }
 
-    public func discoverNeighbors(row: Int, col: Int) {
+    private func discoverNeighbors(row: Int, col: Int) {
         let clickedTile = model.tiles[row][col]
 
         // relative positions of neighbors (a 3x3 grid)

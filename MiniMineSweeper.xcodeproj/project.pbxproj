@@ -17,6 +17,12 @@
 		F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */; };
 		F81D8EFE2B23AD1700DDBD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */; };
 		F81D8F012B23AD1700DDBD38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */; };
+		F89B6C652B3C28C4000E65DB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C642B3C28C4000E65DB /* SettingsViewModel.swift */; };
+		F89B6C672B3C293E000E65DB /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C662B3C293E000E65DB /* SettingsModel.swift */; };
+		F89B6C6A2B405355000E65DB /* ClickModeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C692B405355000E65DB /* ClickModeHandler.swift */; };
+		F89B6C6C2B405366000E65DB /* CrownModeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C6B2B405366000E65DB /* CrownModeHandler.swift */; };
+		F89B6C6E2B405372000E65DB /* GameModeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C6D2B405372000E65DB /* GameModeHandler.swift */; };
+		F89B6C702B405382000E65DB /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B6C6F2B405382000E65DB /* GameMode.swift */; };
 		F8BA04372B24947200DB8647 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04362B24947200DB8647 /* TileView.swift */; };
 		F8BA04392B24948000DB8647 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA04382B24948000DB8647 /* GridView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +39,12 @@
 		F81D8EF92B23AD1400DDBD38 /* MiniMineSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMineSweeperApp.swift; sourceTree = "<group>"; };
 		F81D8EFD2B23AD1700DDBD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81D8F002B23AD1700DDBD38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F89B6C642B3C28C4000E65DB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F89B6C662B3C293E000E65DB /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		F89B6C692B405355000E65DB /* ClickModeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickModeHandler.swift; sourceTree = "<group>"; };
+		F89B6C6B2B405366000E65DB /* CrownModeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownModeHandler.swift; sourceTree = "<group>"; };
+		F89B6C6D2B405372000E65DB /* GameModeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeHandler.swift; sourceTree = "<group>"; };
+		F89B6C6F2B405382000E65DB /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		F8BA04362B24947200DB8647 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		F8BA04382B24948000DB8647 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +65,7 @@
 			children = (
 				F800D5B12B38783500050A5E /* TileModel.swift */,
 				F800D5B32B38783F00050A5E /* GridModel.swift */,
+				F89B6C662B3C293E000E65DB /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -61,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				F815430D2B24CE4900EE3C53 /* GameState.swift */,
+				F89B6C6F2B405382000E65DB /* GameMode.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -104,9 +118,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F89B6C682B405341000E65DB /* GameModes */ = {
+			isa = PBXGroup;
+			children = (
+				F89B6C692B405355000E65DB /* ClickModeHandler.swift */,
+				F89B6C6B2B405366000E65DB /* CrownModeHandler.swift */,
+				F89B6C6D2B405372000E65DB /* GameModeHandler.swift */,
+			);
+			path = GameModes;
+			sourceTree = "<group>";
+		};
 		F8BA04312B24930100DB8647 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F89B6C682B405341000E65DB /* GameModes */,
 				F8BA04362B24947200DB8647 /* TileView.swift */,
 				F8BA04382B24948000DB8647 /* GridView.swift */,
 				F800D5B52B38ED3C00050A5E /* SettingsView.swift */,
@@ -119,6 +144,7 @@
 			children = (
 				F800D5A32B38641800050A5E /* GridViewModel.swift */,
 				F800D5A22B38641800050A5E /* TileViewModel.swift */,
+				F89B6C642B3C28C4000E65DB /* SettingsViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -196,9 +222,15 @@
 			files = (
 				F800D5A52B38641800050A5E /* GridViewModel.swift in Sources */,
 				F800D5B42B38783F00050A5E /* GridModel.swift in Sources */,
+				F89B6C672B3C293E000E65DB /* SettingsModel.swift in Sources */,
 				F81D8EFA2B23AD1400DDBD38 /* MiniMineSweeperApp.swift in Sources */,
 				F800D5B62B38ED3C00050A5E /* SettingsView.swift in Sources */,
+				F89B6C702B405382000E65DB /* GameMode.swift in Sources */,
 				F815430E2B24CE4900EE3C53 /* GameState.swift in Sources */,
+				F89B6C6A2B405355000E65DB /* ClickModeHandler.swift in Sources */,
+				F89B6C6C2B405366000E65DB /* CrownModeHandler.swift in Sources */,
+				F89B6C652B3C28C4000E65DB /* SettingsViewModel.swift in Sources */,
+				F89B6C6E2B405372000E65DB /* GameModeHandler.swift in Sources */,
 				F8BA04372B24947200DB8647 /* TileView.swift in Sources */,
 				F800D5B22B38783500050A5E /* TileModel.swift in Sources */,
 				F8BA04392B24948000DB8647 /* GridView.swift in Sources */,
