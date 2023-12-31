@@ -13,7 +13,7 @@ struct GridView: View {
     @State public var scrollAmount = 0.0
     @State public var prevScrollAmount = 0.0
     @State private var showingSettings = false
-    @State private var gameModeHandler: GameModeHandler = CrownModeHandler()
+    @State private var gameModeHandler: GameModeHandler?
     
     static let scrollThreshold: Double = 10.0
     
@@ -21,6 +21,7 @@ struct GridView: View {
         let settingsVM = SettingsViewModel()
         gridViewModel = GridViewModel(rows: 8, columns: 8, settingsViewModel: settingsVM)
         settingsViewModel = settingsVM
+
     }
 
     var body: some View {
@@ -34,10 +35,13 @@ struct GridView: View {
                     }
                 }
             }
+            .onAppear {
+                self.gameModeHandler = createGameModeHandler(for: settingsViewModel.gameMode)
+            }
             .focusable(true)
             .digitalCrownRotation($scrollAmount)
             .onChange(of: scrollAmount) { value in
-                gameModeHandler.handleDigitalCrownRotation(gridViewModel: gridViewModel, gridView: self, value: value)
+                gameModeHandler?.handleDigitalCrownRotation(gridView: self, value: value)
             }
             .alignmentGuide(.top, computeValue: { _ in
                 return -10
@@ -50,14 +54,14 @@ struct GridView: View {
             }
         }
         .onTapGesture { tapPoint in
-            gameModeHandler.handleTapGesture(gridViewModel: gridViewModel, tap: tapPoint)
+            gameModeHandler?.handleTapGesture(tap: tapPoint)
         }
         .gesture(LongPressGesture(minimumDuration: 0.3)
             .sequenced(before: DragGesture(minimumDistance: 0.0)
             .onEnded { value in
                 switch gridViewModel.gameState {
                 case .playing:
-                    gameModeHandler.handleLongPress(gridViewModel: gridViewModel, tap: value.location)
+                    gameModeHandler?.handleLongPress(tap: value.location)
                 case .won, .lost:
                     gridViewModel.restartGame()
                 }
@@ -66,7 +70,7 @@ struct GridView: View {
         .gesture(swipeUpGesture)
         .sheet(isPresented: $showingSettings) {
             SettingsView(gridViewModel: gridViewModel, showingSettings: $showingSettings)
-                .onChange(of: settingsViewModel.model.gameMode) { newGameMode in
+                .onChange(of: settingsViewModel.gameMode) { newGameMode in
                     gameModeHandler = createGameModeHandler(for: newGameMode)
                 }
         }
@@ -76,10 +80,10 @@ struct GridView: View {
         switch gameMode {
         case .crown:
             gridViewModel.displaySelectTile(display: true)
-            return CrownModeHandler()
+            return CrownModeHandler(gridViewModel: gridViewModel)
         case .click:
             gridViewModel.displaySelectTile(display: false)
-            return ClickModeHandler()
+            return ClickModeHandler(gridViewModel: gridViewModel)
         }
     }
     

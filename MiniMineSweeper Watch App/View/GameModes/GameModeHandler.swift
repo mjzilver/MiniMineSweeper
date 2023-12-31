@@ -9,7 +9,11 @@ import Foundation
 import SwiftUI
 
 protocol GameModeHandler {
-    func handleTapGesture(gridViewModel: GridViewModel, tap: CGPoint)
-    func handleLongPress(gridViewModel: GridViewModel, tap: CGPoint)
-    func handleDigitalCrownRotation(gridViewModel: GridViewModel, gridView: GridView, value: Double)
+    var gridViewModel: GridViewModel { get set }
+    
+    init(gridViewModel: GridViewModel)
+    
+    func handleTapGesture(tap: CGPoint)
+    func handleLongPress(tap: CGPoint)
+    func handleDigitalCrownRotation(gridView: GridView, value: Double)
 }

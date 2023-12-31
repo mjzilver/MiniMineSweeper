@@ -8,15 +8,21 @@
 import Foundation
 
 struct CrownModeHandler: GameModeHandler {
-    func handleTapGesture(gridViewModel: GridViewModel, tap: CGPoint) {
+    var gridViewModel: GridViewModel
+    
+    init(gridViewModel: GridViewModel) {
+        self.gridViewModel = gridViewModel
+    }
+    
+    func handleTapGesture(tap: CGPoint) {
         gridViewModel.discoverSelectedNeighbors()
     }
 
-    func handleLongPress(gridViewModel: GridViewModel, tap: CGPoint) {
+    func handleLongPress(tap: CGPoint) {
         gridViewModel.setSelectedFlag()
     }
 
-    func handleDigitalCrownRotation(gridViewModel: GridViewModel, gridView: GridView, value: Double) {
+    func handleDigitalCrownRotation(gridView: GridView, value: Double) {
         let diff = value - gridView.prevScrollAmount
 
         if abs(diff) > GridView.scrollThreshold {

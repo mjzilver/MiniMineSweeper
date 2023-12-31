@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GameMode: String, CaseIterable {
+enum GameMode: String, CaseIterable, Codable {
     case crown = "Crown Mode"
     case click = "Click Mode"
 }
