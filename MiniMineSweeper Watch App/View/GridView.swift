@@ -28,7 +28,9 @@ struct GridView: View {
             ForEach(0..<8) { row in
                 HStack(spacing: 2) {
                     ForEach(0..<8) { col in
-                        TileView(tileViewModel: TileViewModel(tileModel: gridViewModel.getTile(row: row, col: col)))
+                        if let tile = gridViewModel.getTileAt(row: row, col: col) {
+                            TileView(tileViewModel: TileViewModel(tileModel: tile))
+                        }
                     }
                 }
             }
